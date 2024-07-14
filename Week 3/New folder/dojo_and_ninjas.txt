@@ -1,0 +1,35 @@
+select * from dojos_and_ninjas.dojos;
+
+Insert into dojos (name) value("player 1"), ("player 2"), ("player 3");
+
+delete from dojos where id < 4;
+
+insert into dojos(name) value("coding 1"), ("coding 2"), ("coding 3");
+
+select * from dojos_and_ninjas.ninjas;
+
+Insert into ninjas (first_name, last_name, dojo_id)
+values
+("Jordan", "Nike", "4"),
+("Sam", "Sung", "5"),
+("Apple", "TV", "6");
+
+select * from ninjas 
+Join dojos On ninjas.dojo_id = dojos.id
+where dojos.id = 4;
+
+select * from ninjas
+Join dojos On ninjas.dojo_id = dojos.id
+where dojos.id = 6;
+
+select * from ninjas
+Join dojos On ninjas.dojo_id = dojos.id
+where ninjas.id = 12;
+
+select dojos.name from ninjas
+Join dojos On ninjas.dojo_id = dojos.id
+where ninjas.id = 12;
+
+select * from ninjas
+Join dojos On ninjas.dojo_id = dojos.id
+
